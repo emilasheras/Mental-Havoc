@@ -6,22 +6,23 @@ public class Shooting : MonoBehaviour
 {
     public Transform FirePoint;
     public GameObject BulletPrefab;
+    private void Start()
+    {
+        
+     StartCoroutine(ExampleCoroutine());
+
+    }
 
 
-    private void Update()
+    
+    IEnumerator ExampleCoroutine()
+
     {
 
+       yield return new WaitForSeconds(2);
 
-     if (Input.touchCount > 0)
-
-     {
-        
-         Debug.Log(Input.touchCount);
-
-     }
-
-
-
+        Shoot();
+        Start();
     }
     void Shoot()
     {
