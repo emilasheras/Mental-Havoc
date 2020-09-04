@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
 {
     public Transform FirePoint;
     public GameObject BulletPrefab;
+
     private void Start()
     {
         
@@ -28,6 +29,6 @@ public class Shooting : MonoBehaviour
     {
         
         Instantiate (BulletPrefab, FirePoint.position, FirePoint.rotation);
-
+        
     }
 }

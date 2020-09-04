@@ -187,6 +187,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &497511284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 520204177636960109, guid: 209375cf332156e4abd24f0f098b8627,
+    type: 3}
+  m_PrefabInstance: {fileID: 2898886220667063235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &497511285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497511284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd509a55daaf494da3687d1bc701a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  rb: {fileID: 497511287}
+--- !u!50 &497511287 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4094330396141728117, guid: 209375cf332156e4abd24f0f098b8627,
+    type: 3}
+  m_PrefabInstance: {fileID: 2898886220667063235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,8 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 733479905}
-  BulletPrefab: {fileID: 520204177636960109, guid: 209375cf332156e4abd24f0f098b8627,
-    type: 3}
+  BulletPrefab: {fileID: 497511284}
 --- !u!61 &733479907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -941,6 +966,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094330396141728117, guid: 209375cf332156e4abd24f0f098b8627,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 209375cf332156e4abd24f0f098b8627, type: 3}
