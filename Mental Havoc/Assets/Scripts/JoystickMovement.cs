@@ -11,6 +11,7 @@ public class JoystickMovement : MonoBehaviour
 
    private void Update() 
 {
+    //Movimiento Horizontal
     if (joystick.Horizontal >= .2f)
     {
 
@@ -26,8 +27,24 @@ public class JoystickMovement : MonoBehaviour
     {
         movement.x = 0f;
     }
+    //Movimiento Vertical
+    if (joystick.Vertical >= .2f)
+    {
 
+   movement.y = moveSpeed;
+        
+    }
+    else if (joystick.Vertical <= -.2f)
+    
+    {
+        movement.y = -moveSpeed;
+    }
+    else
+    {
+        movement.y = 0f;
+    }
 
+log             
  
                           
     
