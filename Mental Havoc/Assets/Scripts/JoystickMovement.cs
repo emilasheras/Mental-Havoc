@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class JoystickMovement : MonoBehaviour
 {
-       public float moveSpeed = 5f;
+    //variables uwu
+    public float moveSpeed = 5f;
     public Rigidbody2D rb;
     Vector2 movement;
     public Joystick joystick;
@@ -44,12 +45,12 @@ public class JoystickMovement : MonoBehaviour
         movement.y = 0f;
     }
 
-log             
+          
  
                           
     
 }
-
+//moviemiento con rb
 void FixedUpdate()
 {
     

@@ -14,8 +14,7 @@ public class Shooting : MonoBehaviour
 
     }
 
-
-    
+    //corrutina para esperar
     IEnumerator ExampleCoroutine()
 
     {
@@ -25,6 +24,7 @@ public class Shooting : MonoBehaviour
         Shoot();
         Start();
     }
+    //spawnea la bala "Bullet"
     void Shoot()
     {
         
