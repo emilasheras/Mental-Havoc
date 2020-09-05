@@ -6,11 +6,13 @@ public class Shooting : MonoBehaviour
 {
     public Transform FirePoint;
     public GameObject BulletPrefab;
-
+    Vector3 vectorsito;
     private void Start()
     {
-        
-     StartCoroutine(ExampleCoroutine());
+    
+    vectorsito = new Vector3( 0,1,0);
+
+    StartCoroutine(ExampleCoroutine());
 
     }
 
@@ -28,7 +30,7 @@ public class Shooting : MonoBehaviour
     void Shoot()
     {
         
-        Instantiate (BulletPrefab, FirePoint.position, FirePoint.rotation);
+        Instantiate (BulletPrefab, FirePoint.position+vectorsito, FirePoint.rotation);
         
     }
 }
