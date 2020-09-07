@@ -5,10 +5,11 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     
-    public Transform SpawnPoint;
+    public Transform[] SpawnPoint;
     public GameObject[] Enemies;
 
     private int rand;
+    private int randPosition;
 
     public float StartTimeBtwSpawns;
     private float TimeBtwSpawns;
@@ -26,8 +27,16 @@ public class Spawner : MonoBehaviour
         if (TimeBtwSpawns <= 0)
 
         {  
-          Instantiate(Enemies[0],SpawnPoint.transform.position, Quaternion.identity);
+          rand = Random.Range(0, Enemies.Length);
+          randPosition = Random.Range(0, SpawnPoint.Length);
+          Instantiate(Enemies[rand],SpawnPoint[randPosition].transform.position, Quaternion.identity);
+          TimeBtwSpawns = StartTimeBtwSpawns;
         }
+        else
+        {
+            TimeBtwSpawns -= Time.deltaTime;
+        }
+
 
 
     }

@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 movedown;
     
+    public int health = 2;
+
 
     void Update()
     {
@@ -16,6 +18,24 @@ public class Enemy : MonoBehaviour
     }
     private void FixedUpdate() 
     {
+
      rb.MovePosition(rb.position + movedown * speed * Time.deltaTime);  
+
     }
+    public void TakeDamange (int Damage)
+    {
+        health -= Damage;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+    }
+
 }
