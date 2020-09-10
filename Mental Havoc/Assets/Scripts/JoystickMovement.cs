@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class JoystickMovement : MonoBehaviour
 {
-    //variables uwu
+
+    /*
+    Practicamente programe esto para poder mover al personaje
+     sin necesidad de estar en un celular, la verdad va a
+    quedar desactivado o eliminado este script :3
+    
+    
+    variables uwu
+    */
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     Vector2 movement;
@@ -12,7 +20,7 @@ public class JoystickMovement : MonoBehaviour
 
    private void Update() 
 {
-    //Movimiento Horizontal
+    //Movimiento Horizontal 
     if (joystick.Horizontal >= .2f)
     {
 
@@ -50,7 +58,7 @@ public class JoystickMovement : MonoBehaviour
                           
     
 }
-//moviemiento con rb
+//moviemiento con Rb2D
 void FixedUpdate()
 {
     

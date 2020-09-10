@@ -68,10 +68,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  rb: {fileID: -3492645832395635832}
-  EnemyType: {fileID: 11400000, guid: 48e62bc572fb3fc499dda6f925d86252, type: 2}
+  EnemyDamage: 0
   health: 2
   mysprite: {fileID: -123714839138318439}
+  EnemyType: {fileID: 0}
+  rb: {fileID: -3492645832395635832}
 --- !u!61 &792900937040769500
 BoxCollider2D:
   m_ObjectHideFlags: 0

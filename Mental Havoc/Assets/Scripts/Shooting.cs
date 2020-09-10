@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+
+    //practicamente es lo que genera el tiro, crea la bala sobre la cabeza del personaje.
     public Transform FirePoint;
     public GameObject BulletPrefab;
     Vector3 vectorsito;

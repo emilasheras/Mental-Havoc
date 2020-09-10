@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    
+    //Spawnea enemigos, tanto como quieras baby
     public Transform[] SpawnPoint;
     public GameObject[] Enemies;
 

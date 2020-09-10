@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class Loot 
 {
+    /*
+    En el futuro va a ser un sistema de Loot
+    
+    */
     public int RandomNumber;
 
     void LootTable()

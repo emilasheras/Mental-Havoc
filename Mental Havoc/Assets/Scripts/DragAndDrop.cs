@@ -5,6 +5,7 @@ using UnityEngine;
 public class DragAndDrop : MonoBehaviour
 {
 
+//solamente funciona en celular, lo que permite es agarrar y arrastrar al personaje.
     void Update()
     {
         if (Input.touchCount > 0 )
