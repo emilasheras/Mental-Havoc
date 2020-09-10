@@ -4,12 +4,28 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed;
+    public float EnemyDamage;
+    
+    public int health;
+
+    public SpriteRenderer mysprite;
+    public CreateNewEnemy EnemyType;
+    
+
     public Rigidbody2D rb;
     Vector2 movedown;
-    
-    public int health = 2;
 
+    private void Start()
+    {
+
+    speed = EnemyType.speed;
+    mysprite.sprite = EnemyType.sprite;
+    health = EnemyType.health;
+    EnemyDamage = EnemyType.damage;
+
+
+    }
 
     void Update()
     {
