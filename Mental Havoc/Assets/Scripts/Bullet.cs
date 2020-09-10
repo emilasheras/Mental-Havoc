@@ -6,16 +6,26 @@ public class Bullet : MonoBehaviour
 {
    //Variables
    public int damage = 1;
+   public int CriticalDamage = 1;
+   public int CriticalChance = 10;
    public float speed = 20f;
    public Rigidbody2D rb;
-
+   
+   private int RandomNumber;
    private void Start()
    {
    //se spawnea y empieza a moverse para arriba.
    rb.velocity = transform.up * speed;
+
+   RandomNumber = Random.Range(0,100);
+
+   if (RandomNumber <= CriticalChance )
+   {
+      damage = damage+ CriticalDamage;
+   }
+
    //se destruye despues de 3seg
    Destroy (gameObject, 3);
-
    }
    //rotacion cada frame.
    private void Update() 
@@ -35,4 +45,5 @@ public class Bullet : MonoBehaviour
 
       Destroy(gameObject);
    }
+
 }
