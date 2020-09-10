@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    /*
+    Practicamente defino variables
+    necesarias para el enemy, tanto
+    como el Rb2d como vida,daño,etc.
+
+    */
     public float speed;
     public float EnemyDamage;
     
@@ -16,6 +22,7 @@ public class Enemy : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 movedown;
 
+    //Cuando se spawnea el enemy define el valor de las variables,sprite,etc.
     private void Start()
     {
 
@@ -26,7 +33,7 @@ public class Enemy : MonoBehaviour
 
 
     }
-
+    //Update y Fixedupdate genera el movimiento del enemy
     void Update()
     {
         movedown.y = -speed;
@@ -38,6 +45,8 @@ public class Enemy : MonoBehaviour
      rb.MovePosition(rb.position + movedown * speed * Time.deltaTime);  
 
     }
+
+    //TakeDamage lo que hace es un sistema de vida. Y si se queda en 0 = muere el enemy
     public void TakeDamange (int Damage)
     {
         health -= Damage;
@@ -48,7 +57,7 @@ public class Enemy : MonoBehaviour
         }
 
     }
-
+    //es disparado por el condicional de arriba, destruye el enemy
     void Die()
     {
         Destroy(gameObject);
