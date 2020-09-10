@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffe27575394c633428f7fbd5c25efd02, type: 3}
-  m_Name: New Enemy
+  m_Name: Enemigo
   m_EditorClassIdentifier: 
-  name: DOU
-  speed: 2
-  damage: 2
-  health: 0
+  name: Enemigo1
+  speed: 1.3
+  damage: 5
+  health: 5
   sprite: {fileID: 5409833109024237323, guid: a8fe42cd380e9414a8c164d799770315, type: 3}

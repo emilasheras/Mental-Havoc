@@ -25,12 +25,19 @@ public class Enemy : MonoBehaviour
     //Cuando se spawnea el enemy define el valor de las variables,sprite,etc.
     private void Start()
     {
+    if (EnemyType == null)
+    {
+        Debug.Log("Brazil?");
+    }
+    else 
+    {
 
     speed = EnemyType.speed;
     mysprite.sprite = EnemyType.sprite;
     health = EnemyType.health;
     EnemyDamage = EnemyType.damage;
 
+    }
 
     }
     //Update y Fixedupdate genera el movimiento del enemy
@@ -61,7 +68,9 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
-        
+        //evento que dispare loottable
+        //100% monedas 20%objeto
+        //
     }
 
 }
