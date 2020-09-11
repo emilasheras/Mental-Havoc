@@ -951,6 +951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawner: {fileID: 1592572457}
   Button: {fileID: 1872650715}
+  Progression: {fileID: 11400000, guid: 00d3d8860b943bd47bf560064abe5fa0, type: 2}
 --- !u!4 &1546981548
 Transform:
   m_ObjectHideFlags: 0

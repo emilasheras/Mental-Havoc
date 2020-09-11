@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Enemy : MonoBehaviour
 {
     /*
@@ -17,6 +18,7 @@ public class Enemy : MonoBehaviour
 
     public SpriteRenderer mysprite;
     public CreateNewEnemy EnemyType;
+    public Progression Progression;
     
 
     public Rigidbody2D rb;
@@ -32,11 +34,11 @@ public class Enemy : MonoBehaviour
     else 
     {
 
-    speed = EnemyType.speed;
-    mysprite.sprite = EnemyType.sprite;
-    health = EnemyType.health;
-    EnemyDamage = EnemyType.damage;
+    speed = EnemyType.speed + Progression.speed;
+    EnemyDamage = EnemyType.damage + Progression.damage;
+    health = EnemyType.health + Progression.health;
 
+    mysprite.sprite = EnemyType.sprite;
     }
 
     }
