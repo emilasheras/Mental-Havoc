@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
     mysprite.sprite = EnemyType.sprite;
     }
 
+    Destroy(gameObject,10);
     }
     //Update y Fixedupdate genera el movimiento del enemy
     void Update()
