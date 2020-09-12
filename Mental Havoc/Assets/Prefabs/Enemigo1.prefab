@@ -71,7 +71,8 @@ MonoBehaviour:
   EnemyDamage: 0
   health: 2
   mysprite: {fileID: -123714839138318439}
-  EnemyType: {fileID: 11400000, guid: 5970e41b1308bb44c968a1731bf5e151, type: 2}
+  EnemyType: {fileID: 11400000, guid: 47b3f6ed9d05ab74d839e77b3dc98808, type: 2}
+  Progression: {fileID: 0}
   rb: {fileID: -3492645832395635832}
 --- !u!61 &792900937040769500
 BoxCollider2D:
