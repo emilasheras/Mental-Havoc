@@ -16,4 +16,5 @@ MonoBehaviour:
   speed: 1
   damage: 1
   health: 1
+  SpawnChance: 20
   sprite: {fileID: 21300000, guid: 90e05b317ff1570488dc9b82d9abdaf6, type: 3}

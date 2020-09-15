@@ -10,7 +10,7 @@ public class CreateNewEnemy : ScriptableObject
     public float speed;
     public float damage;
     public int health;
-
+    public int SpawnChance;
     public Sprite sprite;
 
 
