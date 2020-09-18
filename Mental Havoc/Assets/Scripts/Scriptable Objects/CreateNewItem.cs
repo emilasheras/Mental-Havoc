@@ -11,6 +11,8 @@ public class CreateNewItem : ScriptableObject
     public float Critical;
     public int Health;
     public float DropChance;
+
+    public Sprite sprite;
     
 
 }
