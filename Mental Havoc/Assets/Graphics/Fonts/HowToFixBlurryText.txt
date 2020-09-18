@@ -1,0 +1,1 @@
+Go to the font settings and set it to UNICODE. This will get rid of the blur of scaling it.
