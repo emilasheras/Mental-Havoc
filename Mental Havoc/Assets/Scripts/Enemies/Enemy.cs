@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 public class Enemy : MonoBehaviour
@@ -64,6 +65,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            EventLootTable.eventLootTable();
         }
 
     }
@@ -75,5 +77,12 @@ public class Enemy : MonoBehaviour
         //100% monedas 20%objeto
         //
     }
+
+}
+public static class EventLootTable
+{
+    public static Action eventLootTable;
+    
+
 
 }
