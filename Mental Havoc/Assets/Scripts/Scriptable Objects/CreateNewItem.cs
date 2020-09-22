@@ -10,7 +10,7 @@ public class CreateNewItem : ScriptableObject
     public float Damage;
     public float Critical;
     public int Health;
-    public float DropChance;
+    public int DropChance;
 
     public Sprite sprite;
     

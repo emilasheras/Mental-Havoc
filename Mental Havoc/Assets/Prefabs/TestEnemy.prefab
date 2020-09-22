@@ -168,3 +168,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d43e50c6692d14e45b71c777645c5645, type: 2}
   - {fileID: 11400000, guid: 049cb39ad9c1e8040aefc0cf9c1a3819, type: 2}
   - {fileID: 11400000, guid: 63239b1b341d2724098a292c3dbba983, type: 2}
+  randomNumber: 0
+  total: 0

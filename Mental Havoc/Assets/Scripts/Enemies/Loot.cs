@@ -5,28 +5,43 @@ using UnityEngine;
 
 public class Loot : MonoBehaviour
 {
-    public int[] table = {10,45,60};
-    public int total;
-    int RandomNumber;
-
     public CreateNewItem[] items;
-
-
-
-    private void Start()
-    {
-        EventLootTable.eventLootTable += LootTable;
-
-    }
-
-    void LootTable()
     
+    
+
+    public int randomNumber;
+    public int total;
+    
+    
+   private void Start()
+   
+   {
+    if (items.Length == 4)
+    { 
+        total = items[0].DropChance + items[1].DropChance + items[2].DropChance + items[3].DropChance;
+    }
+    else if(items.Length == 3)
     {
-
-
-
+        total = items[0].DropChance + items[1].DropChance + items[2].DropChance;
+    }
+    else
+    {
+        total = 666;
     }
 
+
+    Debug.Log(total);
+
+
+    
+
+
+   }
+
+     
+     
 
 
 }
+
+
