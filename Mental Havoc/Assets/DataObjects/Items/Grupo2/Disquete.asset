@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 0
   Critical: 0
-  Health: 0
-  DropChance: 0
-  sprite: {fileID: 0}
+  Health: 5
+  DropChance: 10
+  sprite: {fileID: 2029542551908640097, guid: 12bd33d4f8e255a4892588ef5b936d76, type: 3}

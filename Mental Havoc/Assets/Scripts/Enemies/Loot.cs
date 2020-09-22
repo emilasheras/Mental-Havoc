@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class Loot : MonoBehaviour
 {
+    public int[] table = {10,45,60};
+    public int total;
+    int RandomNumber;
 
     public CreateNewItem[] items;
 
-    int RandomNumber;
+
 
     private void Start()
     {
@@ -17,44 +20,12 @@ public class Loot : MonoBehaviour
     }
 
     void LootTable()
-    {
-
-      RandomNumber = Random.Range(0,115);
-
-    if (RandomNumber >= 55)
-    {
-
-
-    }
-    else if (RandomNumber  > 10 &&  RandomNumber < 55)
+    
     {
 
 
 
     }
-    else
-    {
-        Debug.Log("10");
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-
 
 
 

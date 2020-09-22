@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaa83e0fd24509145959f6691ea9b89e, type: 3}
   m_Name: Ojo
   m_EditorClassIdentifier: 
-  Damage: 0
+  Damage: 1
   Critical: 0
   Health: 0
-  DropChance: 0
-  sprite: {fileID: 0}
+  DropChance: 60
+  sprite: {fileID: 3719068211130651045, guid: 12bd33d4f8e255a4892588ef5b936d76, type: 3}
