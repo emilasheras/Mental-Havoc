@@ -5,43 +5,47 @@ using UnityEngine;
 
 public class Loot : MonoBehaviour
 {
-    public CreateNewItem[] items;
-    
+    public List<CreateNewItem> items;
+    private CreateNewItem[] items2;
     
 
     public int randomNumber;
     public int total;
     
+    public GameObject Award;
     
    private void Start()
-   
    {
-    if (items.Length == 4)
-    { 
-        total = items[0].DropChance + items[1].DropChance + items[2].DropChance + items[3].DropChance;
-    }
-    else if(items.Length == 3)
+    
+    foreach (var item in items)
+
     {
-        total = items[0].DropChance + items[1].DropChance + items[2].DropChance;
-    }
-    else
-    {
-        total = 666;
+        total += item.DropChance;
     }
 
+
+    randomNumber = Random.Range(0,total);
 
     Debug.Log(total);
 
 
-    
+    for (int i = 0; i < items[i].DropChance; i++ )
+    {
+        if (randomNumber <= items[i].DropChance)
+        {
+            Debug.Log(items[i]);
+        }
+        else
+        {
+            randomNumber -= items[i].DropChance;
+        }
 
 
-   }
+    }
 
-     
-     
-
-
+    }
 }
+
+
 
 
