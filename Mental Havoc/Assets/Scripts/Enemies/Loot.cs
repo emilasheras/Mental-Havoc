@@ -15,37 +15,66 @@ public class Loot : MonoBehaviour
     public GameObject Award;
     
    private void Start()
-   {
+    {
     
-    foreach (var item in items)
+    EventLootTable.eventLootTable += Semurio;
 
-    {
-        total += item.DropChance;
-    }
+    
+        foreach (var item in items)
 
-
-    randomNumber = Random.Range(0,total);
-
-    Debug.Log(total);
-
-
-    for (int i = 0; i < items[i].DropChance; i++ )
-    {
-        if (randomNumber <= items[i].DropChance)
         {
-            Debug.Log(items[i]);
+           total += item.DropChance;
         }
-        else
+    
+
+    }       
+
+
+    
+    void Semurio ()
+    {
+        randomNumber = Random.Range(0,total);
+
+        Debug.Log(total);
+
+
+        for (int i = 0; i < items[i].DropChance; i++ )
         {
-            randomNumber -= items[i].DropChance;
+            if (randomNumber <= items[i].DropChance)
+            {
+            
+                Debug.Log(items[i]);
+            
+
+                return;
+            }
+            else
+            {
+                randomNumber -= items[i].DropChance;
+            }
+
+
         }
-
-
     }
 
-    }
 }
 
 
 
 
+/*
+⠄⠄⠄⠄⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡼⣿⣿⣿⣄⠄⠄⠄⠄⠄⠄⠄ 
+⠄⠄⠄⠄⠄⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡷⣽⣿⣿⣿⣆⠄⠄⠄⠄⠄⠄
+⠄⠄⠄⠄.⣿⣿⣿⣿⣿⣿⣿⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠹⠄⠄⠄⠄⠄ 
+⠄⠄⠄⠄.⣿⣿⣿⣿⣿⣿⣿⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠹⠄⠄⠄⠄⠄ 
+⠄⠄⠄⢸⣿⣿⣿⣿⣿⣿⣿⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⡆⡄⠄⠄⠄⠄ 
+⠄⠄⠄⢸⣿⣿⣿⣿⣿⣿⣿⣏⣿⣿⣿⣿⣿⡿⣼⢧⣆⡿⣾⢸⡇⣿⡄⠄⠄⠄ 
+⠄⠄⠄⢸⣿⣿⣿⣿⣿⣿⣿⣿⡏⢿⣿⣿⣿⣱⢏⣾⢹⡇⣿⢘⣵⣿⣷⠄⠄⣠ 
+⠄⠄⠄⠄⢿⣿⣿⣿⣿⣿⣿⣿⢃⣶⣌⠛⡇⢯⣾⡟⣾⢱⠣⣾⣿⣿⠟⣡⣾⣿ 
+⠄⠄⠄⠄⠈⢿⣿⣿⣿⣿⣿⠯⣼⣿⣿⡇⠘⠿⠿⠃⠇⠄⠄⠙⠟⣡⣾⣿⣿⣿
+⠄⠄⢀⣾⣿⣦⡛⠿⠿⠿⠏⠄⣿⣿⣿⣇⡇⠄⠄⠄⠄⠄⠄⣠⣾⣿⣿⣿⣿⣿ 
+⠄⠄⣾⣿⣿⣿⣿⣶⣦⠄⠄⠄⣿⣿⣿⣿⡇⠄⠄⠄⠄⣠⣾⣿⣿⣿⣿⣿⣿⣿
+⠄⢸⣿⣿⣿⣿⣿⣿⣿⣧⠄⠰⠿⣿⡿⠿⠇⠄⠄⢠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠄⣾⣿⣿⣿⣿⣿⣿⢿⢋⣤⣶⣶⣿⣷⣶⣷⣄⠺⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠄⣿⣿⣿⣿⣿⠟⠁⠈⠁⠄⠄⠄⠄⠄⠄⠄⠄⠁⠈⠻⢿⣿⣿⣿⣿⣿⣿⣿
+*/
