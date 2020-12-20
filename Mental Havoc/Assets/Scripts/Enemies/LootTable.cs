@@ -5,6 +5,6 @@ using UnityEngine;
 public class LootTable : MonoBehaviour
 {
     public CreateNewItem[] Item;
-
+    
 
 }

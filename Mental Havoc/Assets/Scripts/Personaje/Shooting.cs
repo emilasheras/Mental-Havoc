@@ -34,5 +34,6 @@ public class Shooting : MonoBehaviour
         
         Instantiate (BulletPrefab, FirePoint.position+vectorsito, FirePoint.rotation);
         
+        
     }
 }

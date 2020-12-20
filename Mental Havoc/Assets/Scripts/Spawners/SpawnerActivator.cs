@@ -25,6 +25,7 @@ public class SpawnerActivator : MonoBehaviour
         Spawner.SetActive(true);
         Button.SetActive(true);
         Debug.Log("holis");
-
+        
     }
+    
 }
