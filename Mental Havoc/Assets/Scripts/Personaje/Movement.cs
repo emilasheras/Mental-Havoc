@@ -4,20 +4,56 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public Rigidbody2D rb;
-    public Animator anim;
-    Vector2 movement;
+    private Rigidbody2D rb;
+    public float speed;
+    public float jumpForce; 
+    private float moveInput;
 
-private void Update() 
-{
-   movement.x = Input.GetAxisRaw("Horizontal");
-   movement.y = Input.GetAxisRaw("Vertical");
-   //animations();
-}
+    private bool isGrounded;
+    public Transform feetPos;
+    public float checkRadius;
+    public LayerMask whatIsGround;
 
-void FixedUpdate()
-{
-    rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
-}
+    private float jumpTimeCounter;
+    public float jumpTime;
+    private bool isJumping;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();    
+    }
+    
+    private void FixedUpdate()
+    {
+        moveInput = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);    
+    }
+    private void Update()
+    {
+        isGrounded  = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            rb.velocity = Vector2.up * jumpForce;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && isJumping == true)
+        {
+            if(jumpTimeCounter > 0)
+            {
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+        }
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            isJumping = false;
+        }
+
+    }    
 }
